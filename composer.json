@@ -1,0 +1,37 @@
+{
+    "name": "nevar-bot/web",
+    "description": "Web page for Nevar Bot",
+    "version": "1.0.0",
+    "homepage": "https://nevar.eu",
+    "license": "AGPL-3.0",
+    "authors": [
+        {
+            "name": "1887jonas",
+            "email": "admin@nevar.eu",
+            "homepage": "https://github.com/1887jonas",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "contact@nevar.eu",
+        "issues": "https://github.com/nevar-bot/web/issues",
+        "security": "admin@nevar.eu",
+        "chat": "https://nevar.eu/support"
+    },
+    "funding": [
+        {
+            "type": "other",
+            "url": "https://prohosting24.de/cp/donate/nevar"
+        }
+    ],
+
+    "autoload": {
+        "psr-0": {
+            "": ["controller/", "model/", "./"]
+        }
+    },
+    "require": {
+        "twig/twig": "^3.4",
+        "ext-pdo": "*"
+    }
+}
