@@ -28,6 +28,7 @@ class HomepageController extends BaseController {
             $this->view->setContent("user_count", $client->user_count ?? 0);
             $this->view->setContent("command_count", $client->command_count ?? 0);
             $this->view->setContent("vote_count", $client->vote_count ?? 0);
+            $this->view->setContent("homepage", true);
 
             // render view
             $this->view->render("index");

@@ -1,5 +1,144 @@
-<h2>{{ name }}</h2>
-<h4>{{ guild_count }} Server</h4>
-<h4>{{ user_count }} User</h4>
-<h4>{{ command_count }} Commands</h4>
-<h4>{{ vote_count }} Votes</h4>
+<!DOCTYPE html>
+<html lang="de">
+    <!-- Include head -->
+    {% include 'include/head.html.twig' %}
+
+    <body>
+        <!-- Include navigation -->
+        {% include 'include/navigation.html.twig' %}
+
+        <!-- Header -->
+        <header class="header" id="top">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">{{ name }}</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Ein kostenlos nutzbarer, umfangreicher und nutzerfreundlicher Discord-Bot</h2>
+                        <a class="btn btn-primary" href="/invite">Einladen</a>
+                        <!--
+                        <a class="btn btn-primary" href="/support">Support</a>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- About -->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Erstellt für alle</h2>
+                        <p class="text-white-50">
+                            {{ name }} ist ein Discord-Bot, welcher auf dem aktuellsten NodeJS v19 basiert und eine Vielzahl von Funktionen anbietet.
+                            Unser Ziel ist es, aus allen Bereichen die wichtigsten Funktionen in einem Bot zu vereinen.
+                            Durch benutzerfreundliche und einfache Bedienung, ist {{ name }} der perfekte Bot für jeden Discord-Server.
+                        </p>
+                    </div>
+                </div>
+                <img class="img-fluid" src="{{ templateDir }}assets/img/phone.webp" alt="Ein Handy, auf welchem Discord geöffnet ist. Dort wird das Profil von {{ name }} angeschaut"/>
+            </div>
+        </section>
+
+        <!-- Stats -->
+        <section class="stats-section text-center" id="stats">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Das sind die Zahlen</h2>
+                    </div>
+                </div>
+                <div class="row gx-4 gx-lg-5">
+                    <!-- Guild count -->
+                    <div class="col-md-3">
+                        <div class="stats-card guilds">
+                            <i class="fa-brands fa-discord"></i>
+                            <div>
+                                <b>{{ guild_count|number_format(0, ",", ".") }}</b>
+                                <span>Server</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- User count -->
+                    <div class="col-md-3">
+                        <div class="stats-card users">
+                            <i class="fa-solid fa-user-group"></i>
+                            <div>
+                                <b>{{ user_count|number_format(0, ",", ".") }}</b>
+                                <span>Nutzer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vote count -->
+                    <div class="col-md-3">
+                        <div class="stats-card votes">
+                            <i class="fa-solid fa-heart"></i>
+                            <div>
+                                <b>{{ vote_count|number_format(0, ",", ".") }}</b>
+                                <span>Votes im {{ month }}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Command count -->
+                    <div class="col-md-3">
+                        <div class="stats-card commands">
+                            <i class="fa-solid fa-terminal"></i>
+                            <div>
+                                <b>{{ command_count|number_format(0, ",", ".") }}</b>
+                                <span>Befehle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantages -->
+        <section class="advantages-section text-center" id="advantages">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Vorteile</h2>
+                        <p class="text-white-50">
+                            -- TODO: Vorteile von Nevar, Design noch ungeklärt --
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="team-section text-center" id="team">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">Team</h2>
+                        <p class="text-white-50">
+                            -- TODO: Team von Nevar, Design noch ungeklärt --
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Socialmedia -->
+        <section class="social-section bg-black">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="social d-flex justify-content-center">
+                        <a class="mx-2" href="/redirect/support"><i class="fa-brands fa-discord"></i></a>
+                        <a class="mx-2" href="/redirect/twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a class="mx-2" href="/redirect/instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="mx-2" href="/redirect/github"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer-->
+        {% include 'include/footer.html.twig' %}
+    </body>
+</html>
