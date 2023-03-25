@@ -12,6 +12,8 @@ class Router {
     private array $routes = array(
         "/^\s*$/" => array("homepageController", "dispatch"),
         "/^commands/" => array("commandsController", "dispatch"),
+        "/^tutorials/" => array("tutorialController", "dispatch"),
+        "/^hc/" => array("helpcenterController", "dispatch"),
         "/^redirect/" => array("redirectController", "dispatch"),
         "/^(?!\s*$).+/" => array("SubpageController", "dispatch")
     );
