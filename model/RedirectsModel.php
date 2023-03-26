@@ -1,6 +1,6 @@
 <?php
 
-class HelpcenterModel extends BaseModel {
+class RedirectsModel extends BaseModel {
     public function __construct() {
         parent::__construct();
     }

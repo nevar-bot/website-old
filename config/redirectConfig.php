@@ -1,10 +1,4 @@
 <?php
-/**
- * @author 1887jonas
- * @version 1.0
- * @copyright Nevar
- * @description RedirectConfig class for storing redirect variables (accessible by 127.0.0.1/redirect/...)
- */
 
 class RedirectConfig {
     const INSTAGRAM = "https://instagram.com/nevar_eu";

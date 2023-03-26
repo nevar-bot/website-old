@@ -1,17 +1,10 @@
 <?php
-/**
- * @author 1887jonas
- * @version 1.0
- * @copyright Nevar
- * @description HomepageModel class for getting data from the database
- */
 
-class HomepageModel extends BaseModel {
-    public function __construct(){
+class IndexModel extends BaseModel {
+    public function __construct() {
         parent::__construct();
     }
 
-    // get data from api
     public function getBotStats(): object {
         $client = new stdClass();
 

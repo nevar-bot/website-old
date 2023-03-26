@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="{{ templateDir }}assets/favicon.ico" />
+    <link rel="stylesheet" href="{{ adminDir }}assets/styles.css">
+</head>
+<body>
+<nav>
+    <img class="centered" src="{{ templateDir }}assets/favicon.ico" height="64px" width="64px" alt="Logo1">
+    <h2>Interface</h2>
+    <ul>
+        <li><a href="/admin/" class="active">Dashboard</a></li>
+        <li><a href="/admin/articles">Artikel</a></li>
+        <li><a href="/admin/tutorials">Tutorials</a></li>
+        <li><a href="/admin/users">Nutzer</a></li>
+    </ul>
+</nav>
+<main>
+    <h1>Dashboard</h1>
+    <p>Hier kann die Website von {{ name }} grundlegend administriert werden.</p>
+</main>
+</body>
+</html>
