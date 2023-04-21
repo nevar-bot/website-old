@@ -1,4 +1,5 @@
 <?php
+namespace App\Config;
 
 class RedirectConfig {
     const INSTAGRAM = "https://instagram.com/nevar_eu";

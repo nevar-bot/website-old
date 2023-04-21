@@ -1,13 +1,13 @@
 <?php
-
-require_once(__DIR__ . "/../config/config.php");
+namespace App\Model;
+use App\Config\Config;
+use PDO;
 
 class Database {
     private PDO $db;
     private Config $config;
 
     public function __construct() {
-        // connect to database
         $this->config = new Config();
         try {
             $this->db = new PDO("mysql:host=" . $this->config::DB_HOST . ";dbname=" . $this->config::DB_NAME, $this->config::DB_USER, $this->config::DB_PASS);
@@ -17,7 +17,6 @@ class Database {
         }
     }
 
-    // function to execute sql statements
     public function query(string $query): array|bool {
         $stmt = $this->db->query($query);
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

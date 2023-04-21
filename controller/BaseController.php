@@ -1,15 +1,16 @@
 <?php
+namespace App\Controller;
+use App\View\View;
 
 class BaseController {
     protected View $view;
     protected mixed $model;
 
     public function __construct(string $controllerName) {
-        // require view
-        require_once(__DIR__ . "/../view/view.php");
         $this->view = new View();
-        // require model
-        require_once(__DIR__ . "/../model/" . $controllerName . "Model.php");
-        $this->model = new ($controllerName . 'Model')();
+
+        if(isset($this->hasNoModel)) return;
+        $modelClass = "\\App\\Model\\" . $controllerName . "Model";
+        $this->model = new $modelClass();
     }
 }

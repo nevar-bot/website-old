@@ -1,58 +1,35 @@
 <?php
-/**
- * @author 1887jonas
- * @version 1.0
- * @copyright Nevar
- * @license AGPL-3.0
- */
-
-require_once(__DIR__ . "/../vendor/autoload.php");
-
+namespace App\View;
 use Twig\Environment;
-use Twig\Error\LoaderError;
-use Twig\Error\RuntimeError;
-use Twig\Error\SyntaxError;
 use Twig\Loader\FilesystemLoader;
 
-class View
-{
-    // define default variables
-    private array $variables = array(
+class View {
+    private Environment $twig;
+    private array $defaultVariables = array(
         "templateDir" => "/template/Nevar/",
         "adminDir" => "/template/Nevar/admin/",
-        "metaDescription" => "Nevar - Imagine a Bot",
+        "metaDescription" => "Nevar - Effizienz weitergedacht",
         "metaKeywords" => "Discord, Bot, Discordbot, Discord-Bot, Nevar, Nevar-Bot, Nevar-Discord",
         "name" => "Nevar"
     );
+    private array $variables = [];
 
-    // define view engine (twig)
-    private Environment $twig;
 
-    public function __construct()
-    {
-        // set template directory
-        $this->twig = new Environment(new FilesystemLoader($_SERVER["DOCUMENT_ROOT"] . $this->variables["templateDir"]));
+    public function __construct() {
+        $this->twig = new Environment(new FilesystemLoader($_SERVER["DOCUMENT_ROOT"] . $this->defaultVariables["templateDir"]));
     }
 
-    // add variables to view (before rendering)
-    public function setContent($var, $content): void
-    {
-        $this->variables[$var] = $content;
+    public function setVariable(string $name, $value): void {
+        $this->variables[$name] = $value;
     }
 
-    // render view
-    public function render($template): void
-    {
-        try {
-            $this->twig->display($template . ".html.twig", $this->variables);
-        } catch (LoaderError|RuntimeError|SyntaxError $e) {
-            echo $e->getMessage();
-        }
+
+    public function render(string $template): void {
+        $variables = array_merge($this->defaultVariables, $this->variables);
+        $this->twig->display($template . ".html.twig", $variables);
     }
 
-    // check if view file exists
-    public function templateExists($template): bool
-    {
+    public function exists(string $template): bool {
         return $this->twig->getLoader()->exists($template . ".html.twig");
     }
 }

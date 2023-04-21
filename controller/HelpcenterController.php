@@ -1,4 +1,5 @@
 <?php
+namespace App\Controller;
 
 class HelpcenterController extends BaseController {
     public function __construct() {
@@ -6,7 +7,8 @@ class HelpcenterController extends BaseController {
     }
 
     public function index(array $params): void {
-        $this->view->setContent("title", "Nevar · Hilfe");
+        $this->view->setVariable("title", "Nevar · Hilfe");
+
         $this->view->render("helpcenter");
     }
 }

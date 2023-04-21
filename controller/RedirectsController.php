@@ -1,21 +1,23 @@
 <?php
-
-require_once(__DIR__ . "/../config/redirectConfig.php");
+namespace App\Controller;
+use App\Config\RedirectConfig;
 
 class RedirectsController extends BaseController {
+    protected $hasNoModel = true;
+
     public function __construct() {
         parent::__construct("Redirects");
     }
 
     public function index(array $params) {
-        // Check if a redirect was requested
         $params = explode("/", $params[0]);
         if (empty($params[1])) {
-            // No redirect requested, redirect to homepage
             return header("Location: /");
         }
-        // check if requested redirect exists
-        if (!defined((new RedirectConfig())::class . "::" . strtoupper($params[1]))) return header("Location: /");
-        return header("Location: " . constant((new RedirectConfig())::class . "::" . strtoupper($params[1])));
+
+        $redirects = [];
+        $redirects = new RedirectConfig();
+        if(!defined($redirects::class . "::" . strtoupper($params[1]))) return header("Location: /");
+        return header("Location: " . constant($redirects::class . "::" . strtoupper($params[1])));
     }
 }

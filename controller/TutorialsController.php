@@ -1,4 +1,5 @@
 <?php
+namespace App\Controller;
 
 class TutorialsController extends BaseController {
     public function __construct() {
@@ -6,7 +7,10 @@ class TutorialsController extends BaseController {
     }
 
     public function index(array $params): void {
-        $this->view->setContent("title", "Nevar · Tutorials");
+        $tutorials = $this->model->getTutorials();
+        $this->view->setVariable("title", "Nevar · Tutorials");
+        $this->view->setVariable("tutorials", $tutorials);
+
         $this->view->render("tutorials");
     }
 }

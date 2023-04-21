@@ -32,7 +32,9 @@
             <div class="col-lg-8">
                 <h2 class="text-white mb-4">Tutorials</h2>
                 <p class="text-white-50">
-                    -- TODO: Liste der Tutorials, als einzelne Subpages klickbar --
+                    {% for tutorial in tutorials %}
+                        <a href="/hc/tutorial/{{ tutorial.id }}">{{ tutorial.title }}</a><br>
+                    {% endfor %}
                 </p>
             </div>
         </div>

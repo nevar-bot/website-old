@@ -1,4 +1,5 @@
 <?php
+namespace App\Controller;
 
 class CommandsController extends BaseController {
     public function __construct() {
@@ -6,7 +7,10 @@ class CommandsController extends BaseController {
     }
 
     public function index(array $params): void {
-        $this->view->setContent("title", "Nevar · Befehle");
+        $commands = $this->model->getCommands();
+
+        $this->view->setVariable("title", "Nevar · Befehle");
+        $this->view->setVariable("commands", $commands);
         $this->view->render("commands");
     }
 }

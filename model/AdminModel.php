@@ -1,6 +1,6 @@
 <?php
-
-require_once(__DIR__ . "/../config/config.php");
+namespace App\Model;
+use App\Config\Config;
 
 class AdminModel extends BaseModel {
     private Config $config;
@@ -10,8 +10,7 @@ class AdminModel extends BaseModel {
         $this->config = new Config();
     }
 
-
-    public function checkAuth($name, $password): bool {
+    public function checkAuth(string $name, $password): bool {
         $user = $this->db->query("SELECT * FROM users WHERE username = '$name';")[0];
         if($user == null) return false;
         $hashedPassword = $user["password"];
@@ -22,7 +21,7 @@ class AdminModel extends BaseModel {
         }
     }
 
-    public function getUserId($name){
+    public function getUserId(string $name): int {
         return $this->db->query("SELECT id FROM users WHERE username = '$name';")[0]["id"];
     }
 
@@ -30,7 +29,7 @@ class AdminModel extends BaseModel {
         return $this->db->query("SELECT * FROM articles;");
     }
 
-    public function createArticle($title, $text): void{
+    public function createArticle(string $title, $text): void {
         $this->db->query("INSERT INTO articles (id, title, text) VALUES (NULL, '$title', '$text');");
     }
 
@@ -38,7 +37,7 @@ class AdminModel extends BaseModel {
         return $this->db->query("SELECT * FROM articles WHERE id = $id;")[0];
     }
 
-    public function editArticle(int $id, string $title, string $text): void {
+    public function editArticle(int $id, string $title, $text): void {
         $this->db->query("UPDATE articles SET title = '$title', text = '$text' WHERE id = $id;");
     }
 
@@ -50,7 +49,7 @@ class AdminModel extends BaseModel {
         return $this->db->query("SELECT * FROM tutorials;");
     }
 
-    public function createTutorial($title, $text): void{
+    public function createTutorial(string $title, $text): void{
         $this->db->query("INSERT INTO tutorials (id, title, text) VALUES (NULL, '$title', '$text');");
     }
 
@@ -58,7 +57,7 @@ class AdminModel extends BaseModel {
         return $this->db->query("SELECT * FROM tutorials WHERE id = $id;")[0];
     }
 
-    public function editTutorial(int $id, string $title, string $text): void {
+    public function editTutorial(int $id, string $title, $text): void {
         $this->db->query("UPDATE tutorials SET title = '$title', text = '$text' WHERE id = $id;");
     }
 
@@ -70,7 +69,7 @@ class AdminModel extends BaseModel {
         return $this->db->query("SELECT * FROM users;");
     }
 
-    public function createUser($name, $password): void{
+    public function createUser(string $name, $password): void {
         $hashedPassword = password_hash($password . $this->config::DB_SALT, PASSWORD_DEFAULT);
         $this->db->query("INSERT INTO users (id, username, password) VALUES (NULL, '$name', '$hashedPassword');");
     }
@@ -79,7 +78,7 @@ class AdminModel extends BaseModel {
         return $this->db->query("SELECT * FROM users WHERE id = $id;")[0];
     }
 
-    public function editUser(int $id, string $name, string $password): void {
+    public function editUser(int $id, string $name, $password): void {
         $hashedPassword = password_hash($password . $this->config::DB_SALT, PASSWORD_DEFAULT);
         $this->db->query("UPDATE users SET username = '$name', password = '$hashedPassword' WHERE id = $id;");
     }

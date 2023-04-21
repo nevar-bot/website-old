@@ -1,4 +1,5 @@
 <?php
+namespace App\Controller;
 
 class SubpagesController extends BaseController {
     public function __construct() {
@@ -6,6 +7,6 @@ class SubpagesController extends BaseController {
     }
 
     public function index(array $params): void {
-        var_dump($params);
+        //var_dump($params);
     }
 }
