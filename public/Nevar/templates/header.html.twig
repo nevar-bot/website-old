@@ -1,0 +1,37 @@
+<header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <div class="logo">
+            <h1 class="text-light"><a href="/"><span style="font-family: 'All Round Gothic Medium'">{{ name|upper }}</span></a></h1>
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/#home">Home</a></li>
+                <li><a class="nav-link scrollto" href="/#about">Über {{ name }}</a></li>
+                <li><a class="nav-link scrollto" href="/#advantages">Vorteile</a></li>
+                <li><a class="nav-link scrollto" href="/#faq">FAQ</a></li>
+                <li><a class="nav-link scrollto" href="/#team">Team</a></li>
+                <li><a class="nav-link" href="/commands">Befehle</a></li>
+                <li class="dropdown"><a href="#"><span>Weiteres</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/redirect/vote">Voten</a></li>
+                        <li><a href="/redirect/status">Status</a></li>
+                        <li><a href="/contact-us">Kontakt</a></li>
+                        <li class="dropdown"><a href="#"><span>Rechtliches</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="/terms-of-use">Nutzungsbedingungen</a></li>
+                                <li><a href="/bot-privacy">Bot-Datenschutz</a></li>
+                                <li><a href="/privacy">Datenschutzerklärung</a></li>
+                                <li><a href="/imprint">Impressum</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="invite" href="/invite">Einladen</a></li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+
+    </div>
+</header>

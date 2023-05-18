@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- ======= Include head ======= -->
+{% include "templates/head.html.twig" %}
+<!-- End head -->
+
+<body>
+
+<!-- ======= Include header ======= -->
+{% include "templates/header.html.twig" %}
+<!-- End header -->
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Kontakt</h2>
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li>Kontakt</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+    <!-- End breadcrumbs -->
+
+    <section class="inner-page">
+        <div class="container">
+            {% if contactSuccess %}
+                <div class="alert alert-success" role="alert">
+                    Ihre Anfrage ist erfolgreich eingegangen. Wir werden uns zeitnah bei Ihnen melden.
+                </div>
+            {% endif %}
+            {% if contactError %}
+                <div class="alert alert-danger" role="alert">
+                    Ihre Anfrage konnte leider nicht übermittelt werden. Bitte versuchen Sie es später erneut.
+                </div>
+            {% endif %}
+
+            <!-- currently unavailable / 18.05.23 -->
+            <div class="alert alert-danger" role="alert">
+                Leider steht unser Kontaktformular derzeit nicht zur Verfügung. Wir bitten um Entschuldigung.
+            </div>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="name" placeholder="Ihr Name" required disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-Mail-Adresse:<sup>*</sup></label>
+                    <input type="email" class="form-control" id="email" placeholder="Ihre E-Mail Adresse" required disabled>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Nachricht:<sup>*</sup></label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Geben Sie hier Ihre Nachricht ein..." required disabled></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" disabled>Absenden</button>
+            </form>
+            <br>
+            <p>
+                Alternativ können Sie uns per E-Mail an <a href="mailto:hello@nevar.eu">hello@nevar.eu</a> erreichen.
+            </p>
+        </div>
+    </section>
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+{% include "templates/footer.html.twig" %}
+<!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{{ templateDir }}assets/vendor/aos/aos.js"></script>
+<script src="{{ templateDir }}assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ templateDir }}assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="{{ templateDir }}assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="{{ templateDir }}assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="{{ templateDir }}assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="{{ templateDir }}assets/js/main.js"></script>
+
+<!-- Custom subpage CSS & JS -->
+
+
+</body>
+</html>

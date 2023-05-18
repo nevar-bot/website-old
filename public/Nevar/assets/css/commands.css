@@ -1,0 +1,64 @@
+.categories {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.category {
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.category.active {
+    background-color: #F0447D;
+    color: #fff;
+}
+
+.commands-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding-right: 35px;
+    box-sizing: content-box;
+}
+
+.commands {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-right: -15px;
+    box-sizing: content-box;
+}
+
+.command {
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.command:hover {
+    background-color: #d2d2d2;
+}
+
+.command-details {
+    display: none;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.command.active {
+    background-color: #bdbdbd;
+}
+
+.command.active .command-details {
+    display: block;
+}

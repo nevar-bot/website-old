@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- ======= Include head ======= -->
+{% include "templates/head.html.twig" %}
+<!-- End head -->
+
+<body>
+
+  <!-- ======= Include header ======= -->
+  {% include "templates/header.html.twig" %}
+  <!-- End header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Befehle</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>Befehle</li>
+          </ol>
+        </div>
+
+      </div>
+    </section>
+    <!-- End breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container">
+        <div class="categories">
+          {%
+            set categoryLocales = {
+              "administration": "Administration",
+              "fun": "Fun",
+              "minigames": "Minispiele",
+              "misc": "Sonstiges",
+              "moderation": "Moderation"
+            }
+          %}
+
+          {% for category in categories %}
+            <div class="category active" onclick="showCommands('{{ category }}')" data-category="{{ category }}">{{ categoryLocales[category] }}</div>
+          {% endfor %}
+        </div>
+
+        <div class="commands-container">
+          <ul class="commands" id="commandsList">
+            {% for command in commands %}
+              <li class="command {{ command.category }}">
+                {{ command.name }}
+                <div class="command-details">
+                  {{ command.description }}<br>
+                  Cooldown: {{ command.cooldown }} Sekunde(n)<br>
+                  {{ command.member_permissions ? "Benötigte Rechte (Nutzer): #{ command.member_permissions|join}\n"|nl2br : "" }}
+                  {{ command.bot_permissions ? "Benötigte Rechte (Bot): #{ command.bot_permissions|join}\n"|nl2br : "" }}
+                  NSFW: {{ command.nsfw ? "Ja" : "Nein"}}
+                </div>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  {% include "templates/footer.html.twig" %}
+  <!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{{ templateDir }}assets/vendor/aos/aos.js"></script>
+  <script src="{{ templateDir }}assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ templateDir }}assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="{{ templateDir }}assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="{{ templateDir }}assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="{{ templateDir }}assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ templateDir }}assets/js/main.js"></script>
+
+  <!-- Custom subpage CSS & JS -->
+  <link href="{{ templateDir }}assets/css/commands.css" rel="stylesheet">
+  <script src="{{ templateDir }}assets/js/commands.js"></script>
+
+</body>
+</html>
