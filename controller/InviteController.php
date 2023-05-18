@@ -1,15 +1,15 @@
 <?php
 namespace App\Controller;
 
-class SubpagesController extends BaseController {
+class InviteController extends BaseController {
 
     public bool $hasNoModel = true;
     public function __construct() {
-        parent::__construct("Subpages");
+        parent::__construct("Invite");
     }
 
     public function index(array $params): void {
-        //var_dump($params);
-        die();
+        $this->redirect("/redirect/invite");
     }
+
 }

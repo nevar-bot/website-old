@@ -3,6 +3,12 @@
     "description": "Web page for Nevar Bot",
     "version": "1.0.0",
     "homepage": "https://nevar.eu",
+    "scripts": {
+        "start": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S localhost:8080"
+        ]
+    },
     "license": "AGPL-3.0",
     "authors": [
         {

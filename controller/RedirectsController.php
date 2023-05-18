@@ -15,9 +15,8 @@ class RedirectsController extends BaseController {
             return header("Location: /");
         }
 
-        $redirects = [];
         $redirects = new RedirectConfig();
-        if(!defined($redirects::class . "::" . strtoupper($params[1]))) return header("Location: /");
-        return header("Location: " . constant($redirects::class . "::" . strtoupper($params[1])));
+        if(!defined($redirects::class . "::" . strtoupper($params[1]))) return $this->redirect("/");
+        return $this->redirect(constant($redirects::class . "::" . strtoupper($params[1])));
     }
 }

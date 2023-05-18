@@ -12,7 +12,7 @@ class IndexModel extends BaseModel {
         $json = json_decode(file_get_contents("https://api.nevar.eu/client/stats"))->res;
         $client->guild_count = $json->server_count;
         $client->user_count = $json->user_count;
-        $client->channel_count = $json->channel_count->total;
+        $client->channel_count = $json->channel_count;
 
         $json = json_decode(file_get_contents("https://api.nevar.eu/interactions/commands"))->res;
         $client->command_count = $json->command_count;
@@ -21,5 +21,16 @@ class IndexModel extends BaseModel {
         $client->vote_count = $json->votes;
 
         return $client;
+    }
+
+    public function getStaffs(): array {
+        $staffs = array();
+
+        $json = json_decode(file_get_contents("https://api.nevar.eu/client/staffs"))->res;
+        foreach($json->staffs as $staff){
+            $staffs[] = $staff;
+        }
+
+        return $staffs;
     }
 }

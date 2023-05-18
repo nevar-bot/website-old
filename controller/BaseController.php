@@ -13,4 +13,9 @@ class BaseController {
         $modelClass = "\\App\\Model\\" . $controllerName . "Model";
         $this->model = new $modelClass();
     }
+
+    public function redirect(string $url): void {
+        header("Location: " . $url);
+        exit();
+    }
 }

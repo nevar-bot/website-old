@@ -6,7 +6,7 @@ use Twig\Loader\FilesystemLoader;
 class View {
     private Environment $twig;
     private array $defaultVariables = array(
-        "templateDir" => "/template/Nevar/",
+        "templateDir" => "/public/Nevar/",
         "adminDir" => "/template/Nevar/admin/",
         "metaDescription" => "Nevar - Effizienz weitergedacht",
         "metaKeywords" => "Discord, Bot, Discordbot, Discord-Bot, Nevar, Nevar-Bot, Nevar-Discord",

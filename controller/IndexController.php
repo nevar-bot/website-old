@@ -19,6 +19,8 @@ class IndexController extends BaseController {
         $this->view->setVariable("vote_count", $client->vote_count ?? 0);
         $this->view->setVariable("homepage", true);
 
+        $staffs = $this->model->getStaffs();
+        $this->view->setVariable("staffs", $staffs);
         $this->view->render("index");
     }
 }
