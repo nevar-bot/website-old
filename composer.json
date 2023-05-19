@@ -4,10 +4,15 @@
     "version": "1.0.0",
     "homepage": "https://nevar.eu",
     "scripts": {
-        "start": [
+        "local": [
             "Composer\\Config::disableProcessTimeout",
-            "php -S localhost:8080"
+            "php serve.php local"
+        ],
+        "network": [
+            "Composer\\Config::disableProcessTimeout",
+            "php serve.php network"
         ]
+
     },
     "license": "AGPL-3.0",
     "authors": [
