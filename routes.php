@@ -9,6 +9,7 @@ $router
     ->addRoute("/^invite$/", "InviteController", "index")
     ->addRoute("/^support$/", "SupportController", "index")
     ->addRoute("/^contact-us$/", "ContactController", "index")
+    ->addRoute("/^contact-us\/requested/", "ContactController", "requested")
     ->addRoute("/^terms-of-use$/", "TermsController", "index")
     ->addRoute("/^bot-privacy$/", "BotPrivacyController", "index")
     ->addRoute("/^privacy$/", "PrivacyController", "index")
