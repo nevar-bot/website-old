@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Neue Anfrage erhalten</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Neue Anfrage erhalten</h1>
+    <p>Folgende Anfrage wurde von einem Nutzer gesendet:</p>
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>E-Mail:</strong> {{ email }}</p>
+    <p><strong>Nachricht:</strong> {{ message }}</p>
+</div>
+</body>
+</html>

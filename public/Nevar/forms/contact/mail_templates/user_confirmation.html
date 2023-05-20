@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Ihre Anfrage ist eingegangen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+        }
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        strong {
+            font-weight: bold;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .footer {
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Ihre Anfrage ist eingegangen</h1>
+    <p>Hallo {{ name }},</p>
+    <p>Vielen Dank für Ihre Nachricht über unser Kontaktformular. Wir haben Ihre Anfrage erhalten und werden uns in Kürze bei Ihnen melden.</p>
+    <p>Nachfolgend finden Sie eine Zusammenfassung Ihrer Anfrage:</p>
+    <ul>
+        <li><strong>Name:</strong> {{ name }}</li>
+        <li><strong>E-Mail:</strong> {{ email }}</li>
+        <li><strong>Nachricht:</strong> {{ message }}</li>
+    </ul>
+    <p>Wir bemühen uns, Ihnen so schnell wie möglich zu antworten. Bitte haben Sie jedoch Verständnis dafür, dass es je nach Anfrage zu Verzögerungen kommen kann.</p>
+    <p>Wir sind bestrebt, Ihnen innerhalb von zwei Werktagen eine Rückmeldung zu geben.</p>
+    <p>Wir freuen uns darauf, Ihnen weiterhelfen zu können.</p>
+    <br>
+    <p>Mit freundlichen Grüßen,</p>
+    <p>Ihr Nevar-Team</p>
+</div>
+<div class="footer">
+    Hierbei handelt es sich um eine automatisch generierte E-Mail. Bitte antworten Sie nicht auf diese E-Mail, da Ihre Antwort nicht gelesen werden kann.
+</div>
+</body>
+</html>

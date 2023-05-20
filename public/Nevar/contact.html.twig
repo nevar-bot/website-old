@@ -40,6 +40,11 @@
                     Ihre Anfrage konnte leider nicht übermittelt werden. Bitte versuchen Sie es später erneut.
                 </div>
             {% endif %}
+            {% if captchaError %}
+                <div class="alert alert-danger" role="alert">
+                    Ihr Captcha ist abgelaufen oder ungültig. Bitte versuchen Sie es erneut.
+                </div>
+            {% endif %}
             <form action="/contact-us/requested" method="post" id="contact">
                 <div class="mb-3">
                     <label for="name" class="form-label">Name:<sup>*</sup></label>
@@ -57,7 +62,7 @@
                     <input type="checkbox" class="form-check-input" id="consent" name="consent" required>
                     <label class="form-check-label" for="consent">Ich stimme der Verarbeitung meiner Daten zu.</label>
                 </div>
-                <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+                <div class="frc-captcha" style="width: 100vh" data-sitekey="{{ sitekey }}" data-lang="de" data-start="none"></div><br>
                 <button type="submit" class="btn btn-primary">Absenden</button>
             </form>
             <br>
@@ -87,21 +92,20 @@
 <script src="{{ templateDir }}assets/js/main.js"></script>
 
 <!-- Custom subpage CSS & JS -->
-<script src="https://www.google.com/recaptcha/api.js?render=6LdP2yImAAAAALbnIBm_ieWQHRB0qXDmqlbKt6Qe"></script>
+<script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.12/widget.module.min.js"
+        async
+        defer
+></script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.12/widget.min.js" async defer></script>
 <script>
-    document.getElementById("contact").addEventListener("submit", function(event){
+    document.getElementById("contact").addEventListener("submit", function (event) {
         event.preventDefault();
-        submitForm();
+        const captchaElement = document.getElementsByName("frc-captcha-solution")[0];
+        if(captchaElement.defaultValue === ".UNSTARTED") return;
+        document.getElementById("contact").submit();
     });
-
-    function submitForm() {
-        grecaptcha.ready(function() {
-            grecaptcha.execute('6LdP2yImAAAAALbnIBm_ieWQHRB0qXDmqlbKt6Qe', {action: 'submit'}).then(function(token) {
-                document.getElementById('recaptchaResponse').value = token;
-                document.getElementById('contact').submit();
-            });
-        });
-    }
 </script>
 </body>
 </html>
