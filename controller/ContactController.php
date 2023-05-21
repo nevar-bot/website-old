@@ -1,7 +1,6 @@
 <?php
 namespace App\Controller;
 use App\Config\Config;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\PHPMailer;
 
 class ContactController extends BaseController {
@@ -71,7 +70,7 @@ class ContactController extends BaseController {
         $mail->isHTML();
 
         // Absender der E-Mail
-        $mail->setFrom(Config::MAIL_USER, 'Nevar | Noreply');
+        $mail->setFrom(Config::MAIL_USER, 'Nevar 〢 Noreply');
 
         // Bestätigungsmail an den Benutzer senden
         $mail->addAddress($_POST["email"], $_POST["name"]);
@@ -92,7 +91,7 @@ class ContactController extends BaseController {
 
             // E-Mail an Nevar-Staffs senden
             $mail->clearAddresses();
-            $mail->addAddress(Config::STAFF_MAIL, "Administration");
+            $mail->addAddress(Config::STAFF_MAIL, "Nevar 〢 Kontakt");
 
             $mail->Subject = 'Anfrage über Kontaktformular';
             $staffTemplate = str_replace(
