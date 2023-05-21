@@ -13,12 +13,8 @@ class IndexModel extends BaseModel {
         $client->guild_count = $json->server_count;
         $client->user_count = $json->user_count;
         $client->channel_count = $json->channel_count;
-
-        $json = json_decode(file_get_contents("https://api.nevar.eu/interactions/commands"))->res;
         $client->command_count = $json->command_count;
-
-        $json = json_decode(file_get_contents("https://api.nevar.eu/votes/" . date("m")))->res;
-        $client->vote_count = $json->votes;
+        $client->vote_count = $json->vote_count;
 
         return $client;
     }
