@@ -32,7 +32,7 @@ class Router {
             $controller = "\\App\\Controller\\" . $action["controller"];
             $controller = new $controller();
             if ($controller) {
-                $controller->{ $action["method"] }($this->url_params);
+                $controller->{ $action["method"] }($this->url_params, $this);
             }
         }
     }
@@ -48,5 +48,9 @@ class Router {
             }
             $this->url_path = strtok($this->url_path, "?");
         }
+    }
+
+    public function getRoutes(): array {
+        return $this->routes;
     }
 }
