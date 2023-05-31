@@ -32,4 +32,14 @@ class View {
     public function exists(string $template): bool {
         return $this->twig->getLoader()->exists($template . ".html.twig");
     }
+
+    public function isDirOrFile(string $path): ?string {
+        if(is_dir($_SERVER["DOCUMENT_ROOT"] . $this->defaultVariables["templateDir"] . $path)){
+            return "dir";
+        } else if(is_file($_SERVER["DOCUMENT_ROOT"] . $this->defaultVariables["templateDir"] . $path)){
+            return "file";
+        } else {
+            return null;
+        }
+    }
 }

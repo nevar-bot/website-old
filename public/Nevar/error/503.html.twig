@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- ======= Include head ======= -->
+{% include "templates/head.html.twig" %}
+<!-- End head -->
+
+<body>
+
+<!-- ======= Include header ======= -->
+{% include "templates/header.html.twig" %}
+<!-- End header -->
+
+<main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2>Vorübergehend nicht verfügbar</h2>
+                <ol>
+                    <li><a href="/">Home</a></li>
+                    <li>Fehler</li>
+                    <li>503</li>
+                </ol>
+            </div>
+
+        </div>
+    </section>
+    <!-- End breadcrumbs -->
+
+    <section class="inner-page">
+        <div class="container">
+            <h2>Fehler 503</h2><br>
+            <p>Der Server hat Ihre Anfrage verstanden, kann sie derzeit aber nicht bearbeiten. Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.</p>
+            <p>Tritt dieser Fehler wiederholt oder zu verschiedenen Zeitpunkten auf, bitten wir Sie uns zu <a href="/contact-us">kontaktieren</a>.</p>
+        </div>
+    </section>
+
+</main><!-- End #main -->
+
+<!-- ======= Footer ======= -->
+{% include "templates/footer.html.twig" %}
+<!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{{ templateDir }}assets/vendor/aos/aos.js"></script>
+<script src="{{ templateDir }}assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{ templateDir }}assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="{{ templateDir }}assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="{{ templateDir }}assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="{{ templateDir }}assets/vendor/php-email-form/validate.js"></script>
+
+<!-- Template Main JS File -->
+<script src="{{ templateDir }}assets/js/main.js"></script>
+
+<!-- Custom subpage CSS & JS -->
+
+
+</body>
+</html>
