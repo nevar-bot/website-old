@@ -23,6 +23,10 @@ class View {
         $this->variables[$name] = $value;
     }
 
+    public function getVariable(string $name): ?string {
+        return $this->variables[$name] ?? $this->defaultVariables[$name] ?? null;
+    }
+
 
     public function render(string $template): void {
         $variables = array_merge($this->defaultVariables, $this->variables);

@@ -4,8 +4,8 @@ namespace App\Controller;
 class SubpagesController extends BaseController {
 
     public bool $hasNoModel = true;
-    public function __construct() {
-        parent::__construct("Subpages");
+    public function __construct(string $controllerName) {
+        parent::__construct($controllerName);
     }
 
     public function index(array $params): void {
@@ -13,12 +13,12 @@ class SubpagesController extends BaseController {
         if($this->view->exists($params[0])){
             // Datei/Ordner existiert, direkter Zugriff wird aber verhindert
             http_response_code(403);
-            $this->view->setVariable("title", "Nevar · Fehler 403");
+            $this->view->setVariable("title", "Fehler 403");
             $this->view->render("error/403");
         } else {
             // Existiert nicht, 404
             http_response_code(404);
-            $this->view->setVariable("title", "Nevar · 404");
+            $this->view->setVariable("title", "Fehler 404");
             $this->view->render("error/404");
         }
     }

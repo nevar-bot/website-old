@@ -10,8 +10,8 @@ class BaseController {
         $this->view = new View();
 
         if(isset($this->hasNoModel)) return;
-        $modelClass = "\\App\\Model\\" . $controllerName . "Model";
-        $this->model = new $modelClass();
+        $model = "\\App\\Model\\" . $controllerName . "Model";
+        $this->model = new $model();
     }
 
     public function redirect(string $url): void {

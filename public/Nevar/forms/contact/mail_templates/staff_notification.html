@@ -1,38 +1,42 @@
 <html>
 <head>
-    <title>Neue Anfrage erhalten</title>
+    <title>Neue Anfrage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
         }
-
         .container {
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
             background-color: #f9f9f9;
+            border: 1px solid #ddd;
         }
-
         h1 {
             color: #333;
-            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
-
-        p {
-            color: #555;
-            line-height: 1.5;
+        strong {
+            font-weight: bold;
+        }
+        ul {
+            margin-left: 20px;
         }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>Neue Anfrage erhalten</h1>
-    <p>Folgende Anfrage wurde von einem Nutzer gesendet:</p>
-    <p><strong>Name:</strong> {{ name }}</p>
-    <p><strong>E-Mail:</strong> {{ email }}</p>
-    <p><strong>Nachricht:</strong> {{ message }}</p>
+    <h1>Eine neue Anfrage ist eingegangen</h1>
+    <p>Ein Nutzer hat über das Kontaktformular eine Anfrage gestellt.</p>
+    <p>Nachfolgend eine Zusammenfassung der Anfrage:</p>
+    <ul>
+        <li><strong>Name:</strong> {{ name }}</li>
+        <li><strong>E-Mail:</strong> {{ email }}</li>
+        <li><strong>Nachricht:</strong> {{ message }}</li>
+    </ul>
 </div>
 </body>
 </html>

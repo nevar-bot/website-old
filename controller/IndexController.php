@@ -2,12 +2,12 @@
 namespace App\Controller;
 
 class IndexController extends BaseController {
-    public function __construct(){
-        parent::__construct("Index");
+    public function __construct(string $controllerName){
+        parent::__construct($controllerName);
     }
 
     public function index(array $params): void {
-        $this->view->setVariable("title", "Nevar · Discord-Bot");
+        $this->view->setVariable("title", "Discord-Bot");
 
         $monthArray = array("Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember");
         $this->view->setVariable("month", $monthArray[idate("m") - 1]);

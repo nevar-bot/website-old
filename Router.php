@@ -30,7 +30,8 @@ class Router {
 
         if ($this->route_match) {
             $controller = "\\App\\Controller\\" . $action["controller"];
-            $controller = new $controller();
+            $controllerName = str_replace("Controller", "", $action["controller"]);
+            $controller = new $controller($controllerName);
             if ($controller) {
                 $controller->{ $action["method"] }($this->url_params, $this);
             }
