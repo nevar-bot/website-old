@@ -11,8 +11,13 @@
   {% include "templates/header.html.twig" %}
   <!-- End header -->
 
+  <!-- ======= Include cookie banner ======= -->
+  {% include "templates/cookieBanner.html.twig" %}
+  <!-- End cookie banner -->
+
   <!-- ======= Hero Section ======= -->
   <section id="home" class="d-flex align-items-center">
+
 
     <div class="container">
       <div class="row gy-4">
@@ -240,6 +245,9 @@
 
   <!-- Template Main JS File -->
   <script async src="{{ templateDir }}assets/js/main.js"></script>
+
+  <!-- Cookie Banner JS -->
+  <script src="{{ templateDir }}assets/js/cookieBanner.js"></script>
 
 </body>
 

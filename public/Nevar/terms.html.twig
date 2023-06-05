@@ -7,110 +7,116 @@
 
 <body>
 
-<!-- ======= Include header ======= -->
-{% include "templates/header.html.twig" %}
-<!-- End header -->
+    <!-- ======= Include header ======= -->
+    {% include "templates/header.html.twig" %}
+    <!-- End header -->
 
-<main id="main">
+    <!-- ======= Include cookie banner ======= -->
+    {% include "templates/cookieBanner.html.twig" %}
+    <!-- End cookie banner -->
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section class="breadcrumbs">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <h2>Nutzungsbedingungen</h2>
-                <ol>
-                    <li><a href="/">Home</a></li>
-                    <li>Rechtliches</li>
-                    <li>Nutzungsbedingungen</li>
-                </ol>
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Nutzungsbedingungen</h2>
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li>Rechtliches</li>
+                        <li>Nutzungsbedingungen</li>
+                    </ol>
+                </div>
+
             </div>
+        </section>
+        <!-- End breadcrumbs -->
 
-        </div>
-    </section>
-    <!-- End breadcrumbs -->
+        <section class="inner-page">
+            <div class="container">
+                <h3>Nutzungsbedingungen für {{ name }}</h3><br>
 
-    <section class="inner-page">
-        <div class="container">
-            <h3>Nutzungsbedingungen für {{ name }}</h3><br>
-
-            <h5>Vorwort</h5>
-            <p>
-                Folgend sind die Nutzungsbedingungen für die Verwendung des Discord-Bots {{ name }} (im Folgenden "der Bot" oder "{{ name }}"). Diese regeln Ihre Nutzung des Bots. Bitte lesen Sie diese Bedingungen sorgfältig durch.<br>
-                Durch die Verwendung von {{ name }} erklären Sie sich mit den unten aufgeführten Bedingungen einverstanden. <br>
-                Wenn Sie mit diesen Bedingungen nicht einverstanden sind, verwenden Sie den Bot bitte nicht.<br>
-                Wir, das Staff-Team von {{ name }}, sind der Betreiber und Eigentümer des Bots und verwenden den Begriff "wir", um uns zu beziehen.<br><br>
-            </p>
+                <h5>Vorwort</h5>
+                <p>
+                    Folgend sind die Nutzungsbedingungen für die Verwendung des Discord-Bots {{ name }} (im Folgenden "der Bot" oder "{{ name }}"). Diese regeln Ihre Nutzung des Bots. Bitte lesen Sie diese Bedingungen sorgfältig durch.<br>
+                    Durch die Verwendung von {{ name }} erklären Sie sich mit den unten aufgeführten Bedingungen einverstanden. <br>
+                    Wenn Sie mit diesen Bedingungen nicht einverstanden sind, verwenden Sie den Bot bitte nicht.<br>
+                    Wir, das Staff-Team von {{ name }}, sind der Betreiber und Eigentümer des Bots und verwenden den Begriff "wir", um uns zu beziehen.<br><br>
+                </p>
 
 
-            <h5>1. Bot-Funktionalität und Einschränkungen</h5>
-            <p>
-                1.1 {{ name }} bietet verschiedene Funktionen zur Verbesserung der Verwaltung und Moderierung von Discord-Servern. Beachten Sie, dass Verfügbarkeit und Funktionalität des Bots von den Einstellungen und Berechtigungen auf Ihrem Discord-Server abhängen können.<br>
-                1.2 Wir stellen den Bot "wie besehen" zur Verfügung. Wir übernehmen keine Gewährleistung für die kontinuierliche Verfügbarkeit, Genauigkeit oder Zuverlässigkeit des Bots oder seiner Funktionen.<br>
-                1.3 Wir behalten uns das Recht vor, Funktionen des Bots ohne vorherige Ankündigung zu ändern, einzuschränken oder zu entfernen.
-            </p><br>
+                <h5>1. Bot-Funktionalität und Einschränkungen</h5>
+                <p>
+                    1.1 {{ name }} bietet verschiedene Funktionen zur Verbesserung der Verwaltung und Moderierung von Discord-Servern. Beachten Sie, dass Verfügbarkeit und Funktionalität des Bots von den Einstellungen und Berechtigungen auf Ihrem Discord-Server abhängen können.<br>
+                    1.2 Wir stellen den Bot "wie besehen" zur Verfügung. Wir übernehmen keine Gewährleistung für die kontinuierliche Verfügbarkeit, Genauigkeit oder Zuverlässigkeit des Bots oder seiner Funktionen.<br>
+                    1.3 Wir behalten uns das Recht vor, Funktionen des Bots ohne vorherige Ankündigung zu ändern, einzuschränken oder zu entfernen.
+                </p><br>
 
 
-            <h5>2. Bot-Nutzung</h5>
-            <p>
-                2.1 Die Nutzung von {{ name }} erfolgt auf Ihr eigenes Risiko. Wir übernehmen keine Verantwortung für etwaige Schäden oder Verluste, die durch die Nutzung des Bots entstehen.<br>
-                2.2 Sie tragen die Verantwortung für Ihre Nutzung des Bots und alle damit verbundenen Aktivitäten auf Ihrem Discord-Server.<br>
-                2.3 Sie verpflichten sich, den Bot nicht für rechtswidrige, betrügerische oder schädliche Zwecke zu verwenden.<br>
-                2.4 Sie dürfen den Bot nicht für Spam, Belästigung, Stalking oder andere missbräuchliche Verhaltensweisen nutzen.
-            </p><br>
+                <h5>2. Bot-Nutzung</h5>
+                <p>
+                    2.1 Die Nutzung von {{ name }} erfolgt auf Ihr eigenes Risiko. Wir übernehmen keine Verantwortung für etwaige Schäden oder Verluste, die durch die Nutzung des Bots entstehen.<br>
+                    2.2 Sie tragen die Verantwortung für Ihre Nutzung des Bots und alle damit verbundenen Aktivitäten auf Ihrem Discord-Server.<br>
+                    2.3 Sie verpflichten sich, den Bot nicht für rechtswidrige, betrügerische oder schädliche Zwecke zu verwenden.<br>
+                    2.4 Sie dürfen den Bot nicht für Spam, Belästigung, Stalking oder andere missbräuchliche Verhaltensweisen nutzen.
+                </p><br>
 
 
-            <h5>3. Geistiges Eigentum</h5>
-            <p>
-                3.1 {{ name }}, und alle damit verbundenen Inhalte, einschließlich Texte, Bilder, Grafiken, Logos, Audio- oder Videodateien und Software, sind durch Urheberrechte und andere geistige Eigentumsrechte geschützt.<br>
-                3.2 Sie dürfen keine Inhalte des Bots kopieren, reproduzieren, modifizieren, verbreiten, veröffentlichen, übertragen, verkaufen, lizenzieren oder anderweitig nutzen, es sei denn, dies ist ausdrücklich gestattet oder gesetzlich vorgeschrieben.
-            </p><br>
+                <h5>3. Geistiges Eigentum</h5>
+                <p>
+                    3.1 {{ name }}, und alle damit verbundenen Inhalte, einschließlich Texte, Bilder, Grafiken, Logos, Audio- oder Videodateien und Software, sind durch Urheberrechte und andere geistige Eigentumsrechte geschützt.<br>
+                    3.2 Sie dürfen keine Inhalte des Bots kopieren, reproduzieren, modifizieren, verbreiten, veröffentlichen, übertragen, verkaufen, lizenzieren oder anderweitig nutzen, es sei denn, dies ist ausdrücklich gestattet oder gesetzlich vorgeschrieben.
+                </p><br>
 
 
-            <h5>4. Haftungsausschluss</h5>
-            <p>
-                4.1 Wir übernehmen keine Haftung für direkte oder indirekte Schäden, die sich aus der Nutzung des Bots ergeben, einschließlich entgangener Gewinne, Datenverlusten oder Unterbrechungen jeglicher Server-Funktionen.<br>
-                4.2 Der Bot kann Links zu Websites oder Diensten Dritter enthalten. Wir übernehmen keine Verantwortung für den Inhalt, die Datenschutzpraktiken oder die Verfügbarkeit solcher externen Websites oder Dienste.
-            </p><br>
+                <h5>4. Haftungsausschluss</h5>
+                <p>
+                    4.1 Wir übernehmen keine Haftung für direkte oder indirekte Schäden, die sich aus der Nutzung des Bots ergeben, einschließlich entgangener Gewinne, Datenverlusten oder Unterbrechungen jeglicher Server-Funktionen.<br>
+                    4.2 Der Bot kann Links zu Websites oder Diensten Dritter enthalten. Wir übernehmen keine Verantwortung für den Inhalt, die Datenschutzpraktiken oder die Verfügbarkeit solcher externen Websites oder Dienste.
+                </p><br>
 
 
-            <h5>5. Änderungen der Nutzungsbedingungen</h5>
-            <p>
-                5.1 Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit und nach eigenem Ermessen zu ändern oder zu aktualisieren. Die aktualisierten Bedingungen werden auf dieser Website veröffentlicht. Es liegt in Ihrer Verantwortung, regelmäßig nach Aktualisierungen der Nutzungsbedingungen zu suchen.<br>
-                5.2 Durch die fortgesetzte Nutzung des Bots nach einer Aktualisierung der Nutzungsbedingungen erklären Sie sich mit den geänderten Bedingungen einverstanden.
-            </p><br>
+                <h5>5. Änderungen der Nutzungsbedingungen</h5>
+                <p>
+                    5.1 Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit und nach eigenem Ermessen zu ändern oder zu aktualisieren. Die aktualisierten Bedingungen werden auf dieser Website veröffentlicht. Es liegt in Ihrer Verantwortung, regelmäßig nach Aktualisierungen der Nutzungsbedingungen zu suchen.<br>
+                    5.2 Durch die fortgesetzte Nutzung des Bots nach einer Aktualisierung der Nutzungsbedingungen erklären Sie sich mit den geänderten Bedingungen einverstanden.
+                </p><br>
 
 
-            <h5>6. Kontakt</h5>
-            <p>
-                6.1 Wenn Sie Fragen, Anmerkungen oder Bedenken bezüglich des Bots oder dieser Nutzungsbedingungen haben, zögern Sie nicht uns zu kontaktieren. Unsere Kontaktdaten finden Sie im Impressum oder auf der Kontakt-Seite.
-            </p><br><br>
+                <h5>6. Kontakt</h5>
+                <p>
+                    6.1 Wenn Sie Fragen, Anmerkungen oder Bedenken bezüglich des Bots oder dieser Nutzungsbedingungen haben, zögern Sie nicht uns zu kontaktieren. Unsere Kontaktdaten finden Sie im Impressum oder auf der Kontakt-Seite.
+                </p><br><br>
 
 
-            <p>Zuletzt aktualisiert: 19. Mai 2023</p>
-        </div>
-    </section>
+                <p>Zuletzt aktualisiert: 19. Mai 2023</p>
+            </div>
+        </section>
 
-</main><!-- End #main -->
+    </main><!-- End #main -->
 
-<!-- ======= Footer ======= -->
-{% include "templates/footer.html.twig" %}
-<!-- End Footer -->
+    <!-- ======= Footer ======= -->
+    {% include "templates/footer.html.twig" %}
+    <!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<!-- Vendor JS Files -->
-<script src="{{ templateDir }}assets/vendor/aos/aos.js"></script>
-<script src="{{ templateDir }}assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="{{ templateDir }}assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="{{ templateDir }}assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="{{ templateDir }}assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="{{ templateDir }}assets/vendor/php-email-form/validate.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="{{ templateDir }}assets/vendor/aos/aos.js"></script>
+    <script src="{{ templateDir }}assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ templateDir }}assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="{{ templateDir }}assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="{{ templateDir }}assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ templateDir }}assets/vendor/php-email-form/validate.js"></script>
 
-<!-- Template Main JS File -->
-<script src="{{ templateDir }}assets/js/main.js"></script>
+    <!-- Template Main JS File -->
+    <script src="{{ templateDir }}assets/js/main.js"></script>
 
-<!-- Custom subpage CSS & JS -->
+    <!-- Cookie Banner JS -->
+    <script src="{{ templateDir }}assets/js/cookieBanner.js"></script>
 
+    <!-- Custom subpage CSS & JS -->
 
 </body>
 </html>

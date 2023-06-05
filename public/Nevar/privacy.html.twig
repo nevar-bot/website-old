@@ -7,58 +7,63 @@
 
 <body>
 
-<!-- ======= Include header ======= -->
-{% include "templates/header.html.twig" %}
-<!-- End header -->
+    <!-- ======= Include header ======= -->
+    {% include "templates/header.html.twig" %}
+    <!-- End header -->
 
-<main id="main">
+    <!-- ======= Include cookie banner ======= -->
+    {% include "templates/cookieBanner.html.twig" %}
+    <!-- End cookie banner -->
 
-    <!-- ======= Breadcrumbs ======= -->
-    <section class="breadcrumbs">
-        <div class="container">
-            <div class="d-flex justify-content-between align-items-center">
-                <h2>Datenschutzerklärung</h2>
-                <ol>
-                    <li><a href="/">Home</a></li>
-                    <li>Rechtliches</li>
-                    <li>Datenschutzerklärung</li>
-                </ol>
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Datenschutzerklärung</h2>
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li>Rechtliches</li>
+                        <li>Datenschutzerklärung</li>
+                    </ol>
+                </div>
+
             </div>
+        </section>
+        <!-- End breadcrumbs -->
 
-        </div>
-    </section>
-    <!-- End breadcrumbs -->
-
-    <section class="inner-page">
-        <div class="container">
+        <section class="inner-page">
+            <div class="container">
 
 
 
 
-        </div>
-    </section>
+            </div>
+        </section>
 
-</main><!-- End #main -->
+    </main><!-- End #main -->
 
-<!-- ======= Footer ======= -->
-{% include "templates/footer.html.twig" %}
-<!-- End Footer -->
+    <!-- ======= Footer ======= -->
+    {% include "templates/footer.html.twig" %}
+    <!-- End Footer -->
 
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<!-- Vendor JS Files -->
-<script src="{{ templateDir }}assets/vendor/aos/aos.js"></script>
-<script src="{{ templateDir }}assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="{{ templateDir }}assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="{{ templateDir }}assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="{{ templateDir }}assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="{{ templateDir }}assets/vendor/php-email-form/validate.js"></script>
+    <!-- Vendor JS Files -->
+    <script src="{{ templateDir }}assets/vendor/aos/aos.js"></script>
+    <script src="{{ templateDir }}assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ templateDir }}assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="{{ templateDir }}assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="{{ templateDir }}assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="{{ templateDir }}assets/vendor/php-email-form/validate.js"></script>
 
-<!-- Template Main JS File -->
-<script src="{{ templateDir }}assets/js/main.js"></script>
+    <!-- Template Main JS File -->
+    <script src="{{ templateDir }}assets/js/main.js"></script>
 
-<!-- Custom subpage CSS & JS -->
+    <!-- Cookie Banner JS -->
+    <script src="{{ templateDir }}assets/js/cookieBanner.js"></script>
 
-
+    <!-- Custom subpage CSS & JS -->
 </body>
 </html>
