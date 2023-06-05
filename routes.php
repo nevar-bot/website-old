@@ -14,7 +14,6 @@ $router
     ->addRoute("/^bot-privacy$/", "BotPrivacyController", "index")
     ->addRoute("/^privacy$/", "PrivacyController", "index")
     ->addRoute("/^imprint$/", "ImprintController", "index")
-    ->addRoute("/^sitemap$/", "SitemapController", "index")
     ->addRoute("/^vote$/", "VoteController", "index")
     ->addRoute("/^redirect\/(?!\s*$).+/", "RedirectsController", "index")
     ->addRoute("/^(?!\s*$).+/", "SubpagesController", "index");
