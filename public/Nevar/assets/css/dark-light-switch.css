@@ -1,0 +1,100 @@
+.switch-button {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.switch-button input[type="checkbox"] {
+    display: none;
+}
+
+.switch-button label {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: #eee;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.switch-button label::before,
+.switch-button label::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.switch-button label::before {
+    left: 2px;
+}
+
+.switch-button label::after {
+    right: 2px;
+}
+
+.switch-button .sun,
+.switch-button .moon {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 100%;
+    transition: opacity 0.3s ease;
+    outline: none;
+}
+
+.switch-button .sun {
+    left: 0;
+}
+
+.switch-button .moon {
+    right: 0;
+    opacity: 0;
+}
+
+.switch-button input[type="checkbox"]:checked + label {
+    background-color: #aaa;
+}
+
+.switch-button input[type="checkbox"]:checked + label::before {
+    transform: translateX(20px);
+    background-color: #aaa;
+}
+
+.switch-button input[type="checkbox"]:checked + label .sun {
+    opacity: 0;
+}
+
+.switch-button input[type="checkbox"]:checked + label .moon {
+    opacity: 1;
+}
+
+.switch-button label:focus {
+    outline: none;
+}
+
+.switch-button input[type="checkbox"]:not(:checked) + label {
+    background-color: #fff;
+}
+
+.switch-button input[type="checkbox"]:not(:checked) + label::before {
+    transform: translateX(20px);
+    background-color: #fff;
+}
+
+.switch-button input[type="checkbox"]:not(:checked) + label .sun {
+    opacity: 1;
+}
+
+.switch-button input[type="checkbox"]:not(:checked) + label .moon {
+    opacity: 0;
+}
