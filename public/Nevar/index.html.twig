@@ -5,7 +5,7 @@
 {% include "templates/head.html.twig" %}
 <!-- End head -->
 
-<body>
+<body class="dark-mode">
 
   <!-- ======= Include header ======= -->
   {% include "templates/header.html.twig" %}
@@ -86,7 +86,7 @@
 
         <div class="section-title">
           <h2>Vorteile</h2>
-          <p>Diese Vorteile hast du mit {{ name }} an deiner Seite</p>
+          <p>Diese Vorteile bietet {{ name }} dir</p>
         </div>
 
         <div class="row">
@@ -203,25 +203,24 @@
 
         <div class="section-title" data-aos="fade-up">
           <h2>Team</h2>
-          <p>Wir stehen jederzeit zur Verfügung</p>
+          <p>Das Team hinter {{ name }}</p>
         </div>
 
         <div class="row">
           {% for staff in staffs %}
-          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="member">
-              <img src="{{ staff.avatar }}?size=2048" class="img-fluid" alt="">
-              <div class="member-info">
-                <div class="member-info-content">
-                  <h4>{{ staff.username }}</h4>
-                  <span>{{ staff.role }}</span>
+              <div class="custom-col-5" data-aos="zoom-in" data-aos-delay="100">
+                <a class="custom-col-5" href="https://discord.com/users/{{ staff.id }}" target="_blank" rel="noopener">
+                <div class="member">
+                  <img src="{{ staff.avatar }}?size=2048" class="img-fluid" alt="">
+                  <div class="member-info">
+                    <div class="member-info-content">
+                      <h4>{{ staff.username }}</h4>
+                      <span>{{ staff.role }}</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="social">
-                  <a href="https://discord.com/users/{{ staff.id }}" aria-label="Discord Profil von {{ staff.username }}"><i class="bi bi-discord"></i></a>
-                </div>
+                </a>
               </div>
-            </div>
-          </div>
           {% endfor %}
 
         </div>

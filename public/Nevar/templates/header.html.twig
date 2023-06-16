@@ -1,10 +1,8 @@
 <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-
         <div class="logo">
             <h1 class="text-light"><a href="/"><span style="font-family: 'All Round Gothic Medium'">{{ name|upper }}</span></a></h1>
         </div>
-
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a class="nav-link scrollto" href="/#home">Home</a></li>
@@ -30,19 +28,17 @@
                 </li>
                 <li><a class="invite" href="/invite">Einladen</a></li>
                 <li class="switch-button">
+                    <div class="darkmode-button-label">Heller/Dunkler Modus</div>
                     <input type="checkbox" id="switch-toggle" />
                     <label for="switch-toggle">
-                            <span class="sunmoon">
-                                                                <span class="sun"><i class='bx bxs-sun' ></i></span>
-
-                                                              <span class="moon"><i class='bx bxs-moon' ></i></span>
-
-                            </span>
+                        <span>
+                            <span class="sun"><i class='bx bxs-sun' ></i></span>
+                            <span class="moon"><i class='bx bxs-moon' ></i></span>
+                        </span>
                     </label>
                 </li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
-
     </div>
 </header>
