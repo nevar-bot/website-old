@@ -879,7 +879,7 @@ section {
 }
 
 #footer .footer-top .footer-links ul a {
-  color: #5c5c5c;
+  color: var(--text-color);
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
