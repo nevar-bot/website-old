@@ -63,8 +63,9 @@ input[type], textarea, .form-control  {
 }
 
 input[type]:focus, textarea:focus, .form-control:focus {
-    background-color: var(--background-color-darker);
+  background-color: var(--background-color-darker);
   caret-color: var(--text-color);
+  color: var(--text-color);
 }
 
 /*--------------------------------------------------------------
