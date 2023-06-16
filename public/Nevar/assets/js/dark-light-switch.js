@@ -18,11 +18,13 @@ switchButton.addEventListener("change", () => {
             setCookie("colortheme", "dark", 365);
         }
         document.body.classList.add('dark-mode');
+        refreshCSS();
     }else{
         if(getCookie("cookieConsent") === "true") {
             setCookie("colortheme", "light", 365);
         }
         document.body.classList.remove('dark-mode');
+        refreshCSS();
     }
 });
 
@@ -48,4 +50,14 @@ function setCookie(name, value, days){
         expires = "; expires=" + date.toUTCString();
     }
     document.cookie = name + "=" + value + expires + "; path=/; SameSite=None; Secure";
+}
+
+function refreshCSS() {
+    var links = document.getElementsByTagName('link');
+    for (var i = 0; i < links.length; i++) {
+        var link = links[i];
+        if (link.rel === 'stylesheet') {
+            link.href = link.href + '?refresh=' + Date.now();
+        }
+    }
 }
