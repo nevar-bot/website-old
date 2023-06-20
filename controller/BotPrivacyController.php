@@ -10,6 +10,7 @@ class BotPrivacyController extends BaseController {
 
     public function index(array $params): void {
         $this->view->setVariable("title", "Bot-Datenschutz");
+        $this->view->setVariable("ogDescription", "Bot-Datenschutzerklärung gemäß der Discord-Developer Terms-of-Service");
         $this->view->render("bot-privacy");
     }
 

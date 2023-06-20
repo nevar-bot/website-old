@@ -9,7 +9,6 @@ class View {
         "templateDir" => "/public/Nevar/",
         "adminDir" => "/template/Nevar/admin/",
         "metaDescription" => "Nevar - Effizienz weitergedacht",
-        "descriptionLong" => "Nevar ist ein Discord-Bot, der dir dabei hilft die Verwaltung deines Servers zu vereinfachen.",
         "metaKeywords" => "Discord, Bot, Discordbot, Discord-Bot, Nevar, Nevar-Bot, Nevar-Discord",
         "name" => "Nevar"
     );

@@ -17,6 +17,7 @@ class CommandsController extends BaseController {
         }
 
         $this->view->setVariable("title", "Befehle");
+        $this->view->setVariable("ogDescription", "Eine Liste aller Befehle, welche Nevar zur Verfügung stellt.");
         $this->view->setVariable("categories", $categories);
         $this->view->setVariable("commands", $commands);
 

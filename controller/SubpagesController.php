@@ -14,11 +14,13 @@ class SubpagesController extends BaseController {
             // Datei/Ordner existiert, direkter Zugriff wird aber verhindert
             http_response_code(403);
             $this->view->setVariable("title", "Fehler 403");
+            $this->view->setVariable("ogDescription", "Der Zugriff auf die angeforderte Datei/Ordner wurde verweigert.");
             $this->view->render("error/403");
         } else {
             // Existiert nicht, 404
             http_response_code(404);
             $this->view->setVariable("title", "Fehler 404");
+            $this->view->setVariable("ogDescription", "Die angeforderte Datei/Ordner wurde nicht gefunden.");
             $this->view->render("error/404");
         }
     }

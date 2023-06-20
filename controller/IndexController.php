@@ -8,6 +8,7 @@ class IndexController extends BaseController {
 
     public function index(array $params): void {
         $this->view->setVariable("title", "Discord-Bot");
+        $this->view->setVariable("ogDescription", "Nevar ist ein Discord-Bot, der dir dabei hilft die Verwaltung deines Servers zu vereinfachen.");
 
         $monthArray = array("Januar", "Februar", "März", "April", "Mai", "Juni", "Juli", "August", "September", "Oktober", "November", "Dezember");
         $this->view->setVariable("month", $monthArray[idate("m") - 1]);

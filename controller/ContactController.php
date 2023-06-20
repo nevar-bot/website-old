@@ -12,6 +12,7 @@ class ContactController extends BaseController {
 
     public function index(array $params): void {
         $this->view->setVariable("title", "Kontakt");
+        $this->view->setVariable("ogDescription", "Kontakt-Formular für Fragen, Anregungen, Kritik und mehr.");
         $this->view->setVariable("sitekey", Config::FRIENDLY_CAPTCHA_SITEKEY);
         $this->view->render("contact");
     }
@@ -39,6 +40,7 @@ class ContactController extends BaseController {
         if(!$response->success) {
             // Captcha ist abgelaufen oder ungültig, Anfrage blocken und Fehler anzeigen
             $this->view->setVariable("title", "Kontakt");
+            $this->view->setVariable("ogDescription", "Kontakt-Formular für Fragen, Anregungen, Kritik und mehr.");
             $this->view->setVariable("captchaError", 1);
             $this->view->setVariable("sitekey", Config::FRIENDLY_CAPTCHA_SITEKEY);
             $this->view->render("contact");
@@ -85,6 +87,7 @@ class ContactController extends BaseController {
         if ($mail->send()) {
             // Bestätigungs-E-Mail wurde gesendet, Kontaktformular neu rendern mit Bestätigung
             $this->view->setVariable("title", "Kontakt");
+            $this->view->setVariable("ogDescription", "Kontakt-Formular für Fragen, Anregungen, Kritik und mehr.");
             $this->view->setVariable("sitekey", Config::FRIENDLY_CAPTCHA_SITEKEY);
             $this->view->setVariable("contactSuccess", 1);
             $this->view->render("contact");
@@ -104,6 +107,7 @@ class ContactController extends BaseController {
         } else {
             // E-Mail wurde nicht gesendet, Kontaktformular neu rendern mit Fehler
             $this->view->setVariable("title", "Kontakt");
+            $this->view->setVariable("ogDescription", "Kontakt-Formular für Fragen, Anregungen, Kritik und mehr.");
             $this->view->setVariable("contactError", 1);
             $this->view->setVariable("sitekey", Config::FRIENDLY_CAPTCHA_SITEKEY);
 

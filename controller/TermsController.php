@@ -10,6 +10,7 @@ class TermsController extends BaseController {
 
     public function index(array $params): void {
         $this->view->setVariable("title", "Nutzungsbedingungen");
+        $this->view->setVariable("ogDescription", "Die aktuell geltenden Nutzungsbedingungen für Nevar");
         $this->view->render("terms");
     }
 
