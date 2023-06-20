@@ -1,0 +1,117 @@
+.frc-captcha * {
+    text-align: initial;
+    font-size: 14px;
+    line-height: 1.2;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.frc-captcha {
+    position: relative;
+    min-width: 250px;
+    max-width: 312px;
+    padding-bottom: 12px;
+    border-radius: 5px;
+    border: 2px solid var(--background-color-darker);
+    background-color: var(--background-color);
+}
+
+.frc-captcha b {
+    font-weight: bold;
+}
+
+.frc-container {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+}
+
+.frc-icon {
+    fill: var(--text-color);
+    stroke: var(--text-color);
+    flex-shrink: 0;
+    margin: 8px 8px 0 8px;
+}
+
+.frc-icon.frc-warning {
+    fill: #C00;
+}
+
+.frc-success .frc-icon {
+    animation: frc-fade-in 1s both ease-in;
+}
+
+.frc-content {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    margin: 4px 6px 0 0;
+    overflow-x: auto;
+    flex-grow: 1;
+}
+
+.frc-banner {
+    position: absolute;
+    bottom: 0px;
+    right: 6px;
+    line-height: 1;
+}
+
+.frc-banner * {
+    font-size: 10px;
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.frc-progress {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 3px 0;
+    height: 4px;
+    border: none;
+    background-color: #eee;
+    color: #222;
+    width: 100%;
+    transition: all 0.5s linear;
+}
+
+.frc-progress::-webkit-progress-bar {
+    background: #eee;
+}
+
+.frc-progress::-webkit-progress-value {
+    background: #222;
+}
+
+.frc-progress::-moz-progress-bar {
+    background: #222;
+}
+
+.frc-button {
+    cursor: pointer;
+    padding: 2px 6px;
+    background-color: var(--background-color);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    text-align: center;
+    font-weight: 600;
+    text-transform: none;
+}
+
+.frc-button:focus {
+    border: 1px solid #333;
+}
+
+.frc-button:hover {
+    background-color: var(--background-color-darker);
+}
+
+.frc-captcha-solution {
+    display: none;
+}
+
+.frc-err-url {
+    text-decoration: underline;
+    font-size: 0.9em;
+}

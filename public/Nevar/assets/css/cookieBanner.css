@@ -3,7 +3,7 @@
     bottom: 2%;
     left: 2%;
     width: 30%;
-    background-color: #f8f8f8;
+    background-color: var(--background-color);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding: 20px;
     text-align: center;
@@ -16,7 +16,7 @@
 .cookie-text p {
     margin: 0;
     font-size: 14px;
-    color: #555;
+    color: var(--text-color);
 }
 
 .cookie-actions {
@@ -24,7 +24,7 @@
 }
 
 #accept-cookies {
-    background-color: #F0447D;
+    background-color: var(--a-color);
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -36,7 +36,7 @@
 }
 
 #accept-cookies:hover {
-    background-color: #FF80AB;
+    background-color: var(--a-color-hover);
 }
 
 @media (max-width: 767px) {
@@ -60,5 +60,5 @@
 
 .cookie-title {
     font-weight: bold;
-    color: #333;
+    color: var(--text-color);
 }
