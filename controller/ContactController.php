@@ -84,7 +84,7 @@ class ContactController extends BaseController {
 
         if ($mail->send()) {
             // Bestätigungs-E-Mail wurde gesendet, Kontaktformular neu rendern mit Bestätigung
-            $this->view->setVariable("title", "Nevar · Kontakt");
+            $this->view->setVariable("title", "Kontakt");
             $this->view->setVariable("sitekey", Config::FRIENDLY_CAPTCHA_SITEKEY);
             $this->view->setVariable("contactSuccess", 1);
             $this->view->render("contact");
