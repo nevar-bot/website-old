@@ -33,6 +33,10 @@ body {
   font-family: "Open Sans", sans-serif;
   color: var(--text-color);
   background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 a {
