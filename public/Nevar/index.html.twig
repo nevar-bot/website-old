@@ -209,22 +209,18 @@
         <div class="row justify-content-center text-center">
           {% for staff in staffs %}
               <div class="col-md-2" data-aos="zoom-in" data-aos-delay="100">
-                <a class="col-md-2" href="https://discord.com/users/{{ staff.id }}" target="_blank" rel="noopener">
                 <div class="member">
                   <img src="{{ staff.avatar }}?size=2048" class="img-fluid" alt="">
                   <div class="member-info">
                     <div class="member-info-content">
-                      <h4>{{ staff.username }}</h4>
+                      <a href="https://discord.com/users/{{ staff.id }}" target="_blank" rel="noopener"><h4>{{ staff.username }}</h4></a>
                       <span>{{ staff.role }}</span>
                     </div>
                   </div>
                 </div>
-                </a>
               </div>
           {% endfor %}
-
         </div>
-
       </div>
     </section><!-- End Team Section -->
   </main><!-- End #main -->
