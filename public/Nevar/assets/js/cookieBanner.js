@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
     function getCookie(name){
         const nameEQ = name + "=";
         const cookies = document.cookie.split(";");
-        for(let i = 0; i < cookies.length; i++){
-            let cookie = cookies[i];
+        for(const element of cookies) {
+            let cookie = element;
             while(cookie.charAt(0) === " "){
                 cookie = cookie.substring(1, cookie.length);
             }

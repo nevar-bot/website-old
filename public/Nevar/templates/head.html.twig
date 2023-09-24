@@ -19,15 +19,13 @@
 
     <!-- Fonts -->
     <link href="{{ templateDir }}assets/css/fonts.css" rel="stylesheet">
+
     <!-- Vendor CSS -->
-    <link href="{{ templateDir }}assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
     <link href="{{ templateDir }}assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ templateDir }}assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="{{ templateDir }}assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="{{ templateDir }}assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
     <!-- Font Awesome & Boxicons -->
-    <script src="https://kit.fontawesome.com/477541b8bd.js" crossorigin="anonymous"></script>
+    <link href="{{ templateDir }}assets/fontawesome/css/all.min.css" rel="stylesheet">
     <link href="{{ templateDir }}assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Main CSS -->
@@ -38,4 +36,36 @@
 
     <!-- Dark/Light Mode Switch CSS -->
     <link href="{{ templateDir }}assets/css/dark-light-switch.css" rel="stylesheet">
+
+    <!-- Matomo -->
+    <script>
+        if(getCookie("cookieConsent") === "true"){
+            var _paq = window._paq = window._paq || [];
+            _paq.push(['disableCookies']);
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+                var u="//mtm.nevar.eu/";
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', '1']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+        }
+
+        function getCookie(name){
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(";");
+            for(const element of cookies) {
+                let cookie = element;
+                while(cookie.charAt(0) === " "){
+                    cookie = cookie.substring(1, cookie.length);
+                }
+                if(cookie.indexOf(nameEQ) === 0){
+                    return cookie.substring(nameEQ.length, cookie.length);
+                }
+            }
+            return null;
+        }
+    </script>
 </head>
