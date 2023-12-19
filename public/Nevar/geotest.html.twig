@@ -1,0 +1,243 @@
+
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- ======= Include head ======= -->
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Meta information -->
+    <title>Nevar &middot; Fehler 500</title>
+    <meta content="Nevar - Effizienz weitergedacht" name="description">
+    <meta content="Discord, Bot, Discordbot, Discord-Bot, Nevar, Nevar-Bot, Nevar-Discord" name="keywords">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Nevar &middot; Fehler 500">
+    <meta property="og:description" content="Die angeforderte Datei/Ordner wurde nicht gefunden.">
+    <meta property="og:image" content="/public/Nevar/assets/img/logo_transparent.webp">
+    <meta property="theme-color" content="#394f8a">
+
+    <!-- Favicons -->
+    <link href="/public/Nevar/assets/img/logo_transparent.webp" rel="icon">
+    <link href="/public/Nevar/assets/img/logo_transparent.webp" rel="apple-touch-icon">
+
+    <!-- Fonts -->
+    <link href="/public/Nevar/assets/css/fonts.css" rel="stylesheet">
+
+    <!-- Vendor CSS -->
+    <link href="/public/Nevar/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/public/Nevar/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Font Awesome & Boxicons -->
+    <link href="/public/Nevar/assets/fontawesome/css/all.min.css" rel="stylesheet">
+    <link href="/public/Nevar/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Main CSS -->
+    <link href="/public/Nevar/assets/css/style.css" rel="stylesheet">
+
+    <!-- Cookie Banner CSS -->
+    <link href="/public/Nevar/assets/css/cookieBanner.css" rel="stylesheet">
+
+    <!-- Dark/Light Mode Switch CSS -->
+    <link href="/public/Nevar/assets/css/dark-light-switch.css" rel="stylesheet">
+
+    <!-- Matomo -->
+    <script>
+        if(getCookie("cookieConsent") === "true"){
+            var _paq = window._paq = window._paq || [];
+            _paq.push(['disableCookies']);
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+                var u="//mtm.nevar.eu/";
+                _paq.push(['setTrackerUrl', u+'matomo.php']);
+                _paq.push(['setSiteId', '1']);
+                var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+                g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+        }
+
+        function getCookie(name){
+            const nameEQ = name + "=";
+            const cookies = document.cookie.split(";");
+            for(const element of cookies) {
+                let cookie = element;
+                while(cookie.charAt(0) === " "){
+                    cookie = cookie.substring(1, cookie.length);
+                }
+                if(cookie.indexOf(nameEQ) === 0){
+                    return cookie.substring(nameEQ.length, cookie.length);
+                }
+            }
+            return null;
+        }
+    </script>
+</head><!-- End head -->
+
+<body class="dark-mode">
+
+    <!-- ======= Include header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+        <div class="logo">
+            <h1 class="text-light"><a href="/"><span style="font-family: 'All Round Gothic Medium'">NEVAR</span></a></h1>
+        </div>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a class="nav-link scrollto" href="/#home">Home</a></li>
+                <li><a class="nav-link scrollto" href="/#about">Über Nevar</a></li>
+                <li><a class="nav-link scrollto" href="/#advantages">Vorteile</a></li>
+                <li><a class="nav-link scrollto" href="/#faq">FAQ</a></li>
+                <li><a class="nav-link scrollto" href="/#team">Team</a></li>
+                <li><a class="nav-link" href="/commands">Befehle</a></li>
+                <li class="dropdown"><a href="#"><span>Weiteres</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="/redirect/vote">Voten</a></li>
+                        <li><a href="/redirect/status">Status</a></li>
+                        <li><a href="/contact-us">Kontakt</a></li>
+                        <li class="dropdown"><a href="#"><span>Rechtliches</span> <i class="bi bi-chevron-right"></i></a>
+                            <ul>
+                                <li><a href="/terms-of-use">Nutzungsbedingungen</a></li>
+                                <li><a href="/bot-privacy">Bot-Datenschutz</a></li>
+                                <li><a href="/privacy">Datenschutzerklärung</a></li>
+                                <li><a href="/imprint">Impressum</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a class="invite" href="/invite">Einladen</a></li>
+                <li class="switch-button">
+                    <div class="darkmode-button-label">Heller/Dunkler Modus</div>
+                    <input type="checkbox" id="switch-toggle" />
+                    <label for="switch-toggle">
+                        <span>
+                            <span class="sun"><i class='bx bxs-sun' ></i></span>
+                            <span class="moon"><i class='bx bxs-moon' ></i></span>
+                        </span>
+                    </label>
+                </li>
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+    </div>
+</header>    <!-- End header -->
+
+    <!-- ======= Include cookie banner ======= -->
+    <div id="cookie-banner">
+    <div class="cookie-text">
+        <h5 class="cookie-title">Wir respektieren Ihre Privatsphäre</h5>
+        <p>Wir verwenden Cookies, um Ihr Nutzungserlebnis zu verbessern und Ihnen personalisierte Inhalte anbieten zu können. Durch Klicken auf 'Akzeptieren' stimmen Sie der Verwendung von Cookies gemäß unserer <a href="/privacy">Datenschutzerklärung</a> zu.</p>
+    </div>
+    <div class="cookie-actions">
+        <button id="accept-cookies">Akzeptieren</button>
+    </div>
+</div>    <!-- End cookie banner -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section class="breadcrumbs">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h2>Ein interner Fehler trat auf</h2>
+                    <ol>
+                        <li><a href="/">Home</a></li>
+                        <li>Fehler</li>
+                        <li>500</li>
+                    </ol>
+                </div>
+
+            </div>
+        </section>
+        <!-- End breadcrumbs -->
+
+        <section class="inner-page">
+            <div class="container">
+                <h2>Fehler 500</h2><br>
+                <p>Ein interner Serverfehler trat auf.</p>
+                <p>Sollte der Fehler bestehen, bitten wir sie uns zu <a href="/contact-us">kontaktieren</a>.</p>
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h3 style="font-family:'All Round Gothic Medium'">Nevar</h3>
+                    <p>
+                        Mit Nevar bieten wir einen modernen Discord-Bot zur Unterstützung bei der Moderierung wie Verwaltung deines Discord-Servers
+                    </p>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Nützliche Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/#about" class="scrollto">Über Nevar</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/#advantages" class="scrollto">Vorteile</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/#faq" class="scrollto">FAQ</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/#team" class="scrollto">Team</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/commands" class="scrollto">Befehle</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/redirect/vote" rel="noopener" target="_blank" class="scrollto">Voten</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Weitere Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/redirect/status" rel="noopener" target="_blank">Status</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/contact-us">Kontakt</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/terms-of-use">Nutzungsbedingungen</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/bot-privacy">Bot-Datenschutz</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/privacy">Datenschutzerklärung</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="/imprint">Impressum</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Soziale Netzwerke</h4>
+                    <p>Auf folgenden sozialen Netzwerken und Plattformen ist Nevar vertreten:</p>
+                    <div class="social-links mt-3">
+                        <a href="/redirect/support" class="discord" rel="noopener" target="_blank" aria-label="Support-Discord-Server"><i class="fa-brands fa-discord"></i></a>
+                        <a href="/redirect/instagram" class="instagram" rel="noopener" target="_blank" aria-label="Instagram Seite von Nevar"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="/redirect/x" class="x" rel="noopener" target="_blank" aria-label="X Seite von Nevar"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="/redirect/github" class="github" rel="noopener" target="_blank" aria-label="Github Seite von Nevar"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <div class="copyright">
+            &copy; Copyright 2023 <strong><span>Nevar</span></strong>. All Rights Reserved.
+        </div>
+        <div class="credits">
+            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+    </div>
+</footer>
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="/public/Nevar/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Template Main JS File -->
+<script src="/public/Nevar/assets/js/main.js"></script>
+
+<!-- Cookie Banner JS -->
+<script src="/public/Nevar/assets/js/cookieBanner.js"></script>
+
+<!-- Dark/Light Mode Switch CSS -->
+<script src="/public/Nevar/assets/js/dark-light-switch.js"></script>    <!-- End Footer -->
+
+    <!-- Custom subpage CSS & JS -->
+</body>
+</html>
