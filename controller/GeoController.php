@@ -9,21 +9,19 @@ class GeoController extends BaseController {
     }
 
     public function index(array $params): void {
-        setlocale(LC_TIME, 'de_DE', 'deu_deu');
         
         $this->view->setVariable("title", "Geotest");
         
         $this->view->render("geotest");
         $ipAddress = $_SERVER['REMOTE_ADDR'] . (isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? "(From client: " . $_SERVER['HTTP_X_FORWARDED_FOR'] . ")" : "");
 
-if(!file_exists(dirname(__DIR__, 1) . "/ip_logs.txt")) {
-    file_put_contents(dirname(__DIR__, 1) . "/ip_logs.txt", $ipAddress . "\n");
-} else {
-    $contents = file_get_contents(dirname(__DIR__, 1) . "/ip_logs.txt");
-    $contents .= strftime("%A, %d. %B %Y") . " - ";
-    $contents .= $ipAddress . "\n";
-    file_put_contents(dirname(__DIR__, 1) . "/ip_logs.txt", $contents);
-}
+        if(!file_exists(dirname(__DIR__, 1) . "/ip_logs.txt")) {
+            file_put_contents(dirname(__DIR__, 1) . "/ip_logs.txt", $ipAddress . "\n");
+        } else {
+            $contents = file_get_contents(dirname(__DIR__, 1) . "/ip_logs.txt");
+            $contents .= date("d.m.Y H:i:s") . " - ";
+            $contents .= $ipAddress . "\n";
+            file_put_contents(dirname(__DIR__, 1) . "/ip_logs.txt", $contents);
+        }
     }
-
 }
