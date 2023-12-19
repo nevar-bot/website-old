@@ -6,7 +6,7 @@ $router = new Router();
 $router
     ->addRoute("/^\s*$/", "IndexController", "index")
     ->addRoute("/^commands$/", "CommandsController", "index")
-    -> addRoute)"/^geotest$/", "GeoController", "index")
+    ->addRoute("/^geotest$/", "GeoController", "index")
     ->addRoute("/^invite$/", "InviteController", "index")
     ->addRoute("/^support$/", "SupportController", "index")
     ->addRoute("/^contact-us$/", "ContactController", "index")
